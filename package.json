@@ -2,7 +2,9 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://askadias.github.io/react-starter",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "immutable": "^3.8.2",
     "material-ui": "^0.19.4",
     "material-ui-number-input": "^5.0.24",
@@ -28,7 +30,9 @@
     "build": "npm-run-all build-css build-js",
     "build-js": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "enzyme": "^3.1.1",
