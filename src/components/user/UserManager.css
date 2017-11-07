@@ -1,7 +1,14 @@
 .UserManager {
-  width: 1000px;
-  margin: auto; }
+  max-width: 1024px;
+  margin: auto;
+  height: inherit; }
 
 .User-add-panel {
-  margin-bottom: 1em;
-  height: 80px; }
+  margin-bottom: 1em; }
+
+.UserAdd-form {
+  display: block; }
+
+@media (max-width: 768px) {
+  .UserAdd-form {
+    display: inline-grid; } }

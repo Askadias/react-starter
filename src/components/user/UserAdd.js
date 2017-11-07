@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
-import NumberInput from 'material-ui-number-input';
 import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 
@@ -28,6 +27,9 @@ class UserAdd extends Component {
     onSubmit = (event) => {
         event.preventDefault();
         const {user} = this.state;
+        if (!user.firstName.trim() || !user.age.trim()) {
+            return
+        }
         this.props.onAddUser({
             firstName: user.firstName,
             lastName: user.lastName,
@@ -39,13 +41,13 @@ class UserAdd extends Component {
     render() {
         return (
             <Paper className='User-add-panel' zDepth={2}>
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit} className='UserAdd-form'>
                     <TextField name='firstName' value={this.state.user.firstName} floatingLabelText="First Name"
                                onChange={this.handleInputChange}/>
                     <TextField name='lastName' value={this.state.user.lastName} floatingLabelText="Last Name"
                                onChange={this.handleInputChange}/>
-                    <NumberInput name='age' value={this.state.user.age} min={1} max={150} floatingLabelText="Age"
-                                 onChange={this.handleInputChange}/>
+                    <TextField name='age' value={this.state.user.age} floatingLabelText="Age"
+                               onChange={this.handleInputChange}/>
                     <RaisedButton type='submit' label="Add User" primary={true}/>
                 </form>
             </Paper>

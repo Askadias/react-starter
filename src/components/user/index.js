@@ -7,7 +7,9 @@ import usersApp from "./reducers";
 import {setUsers} from "./actions";
 import './UserManager.css'
 
-let usersStore = createStore(usersApp, window.devToolsExtension({name: 'Users', instanceId: 'users'}));
+let usersStore = window.devToolsExtension
+    ? createStore(usersApp, window.devToolsExtension({name: 'Users', instanceId: 'users'}))
+    : createStore(usersApp);
 
 usersStore.dispatch(setUsers([
     {id: 1, firstName: 'Kast', lastName: 'Askadias', age: 31},

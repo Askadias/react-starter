@@ -2,12 +2,11 @@ import React from 'react';
 import {Route} from 'react-router-dom'
 import {TransitionGroup} from 'react-transition-group'
 import NavBar, {routes} from "./components/Navigation";
-import './App.css';
-import './index.css';
 import {Fade} from "./animations/index";
 import Switch from "react-router/es/Switch";
 import Home from "./components/Home";
 import Redirect from "react-router/es/Redirect";
+import './App.css';
 
 const App = () => (
     <div className="App">

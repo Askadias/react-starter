@@ -10,7 +10,9 @@ import tasksApp from "./reducers";
 
 import './TaskManager.css'
 
-let tasksStore = createStore(tasksApp, window.devToolsExtension({ name: 'Tasks', instanceId: 'tasks' }));
+let tasksStore = window.devToolsExtension
+    ? createStore(tasksApp, window.devToolsExtension({name: 'Tasks', instanceId: 'tasks'}))
+    : createStore(tasksApp);
 
 tasksStore.dispatch(setTasks([
     {id: 0, text: 'Finish react tutorial', completed: true},
