@@ -1,6 +1,7 @@
 import FlatButton from 'material-ui/FlatButton/FlatButton';
-import {setVisibilityFilter} from "../../actions";
+import {setVisibilityFilter} from "../actions";
 import connect from "react-redux/es/connect/connect";
+
 
 const mapStateToProps = (state, ownProps) => {
     return {

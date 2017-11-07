@@ -2,7 +2,7 @@ import React from 'react'
 import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 import TextField from 'material-ui/TextField/TextField';
 import connect from "react-redux/es/connect/connect";
-import {addTask} from "../../actions/index";
+import {addTask} from "../actions";
 
 let AddTask = ({dispatch}) => {
     let input;

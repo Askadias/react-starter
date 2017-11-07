@@ -3,7 +3,6 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 import IconButton from 'material-ui/IconButton';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import PropTypes from 'prop-types';
-
 import './UserManager.css'
 
 const UsersList = ({users, onDeleteUser}) => (

@@ -1,6 +1,6 @@
-import {deleteUser} from "../../actions/index";
-import UsersList from "../../components/user/UsersList";
 import connect from "react-redux/es/connect/connect";
+import {deleteUser} from "../actions";
+import UsersList from "../UsersList";
 
 const mapStateToProps = (state) => {
     return {users: state.users}

@@ -1,10 +1,10 @@
 import React from 'react'
-import UsersListContainer from "../../containers/users/UsersListContainer";
-import UserAdd from "../../containers/users/UserAdd";
+import UsersList from "./containers/UsersList";
+import UserAdd from "./containers/UserAdd";
 import Provider from "react-redux/es/components/Provider";
 import createStore from "redux/es/createStore";
-import {usersApp} from "../../reducers";
-import {setUsers} from "../../actions";
+import usersApp from "./reducers";
+import {setUsers} from "./actions";
 import './UserManager.css'
 
 let usersStore = createStore(usersApp, window.devToolsExtension({name: 'Users', instanceId: 'users'}));
@@ -18,7 +18,7 @@ const UserManager = () => (
     <Provider store={usersStore}>
         <div className='UserManager'>
             <UserAdd/>
-            <UsersListContainer/>
+            <UsersList/>
         </div>
     </Provider>
 );

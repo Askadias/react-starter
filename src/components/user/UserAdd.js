@@ -9,7 +9,7 @@ import './UserManager.css'
 
 const emptyUser = {firstName: '', lastName: '', age: '30'};
 
-export default class UserAddForm extends Component {
+class UserAdd extends Component {
 
     constructor(props) {
         super(props);
@@ -53,6 +53,8 @@ export default class UserAddForm extends Component {
     }
 }
 
-UserAddForm.propTypes = {
+UserAdd.propTypes = {
     onAddUser: PropTypes.func.isRequired
 };
+
+export default UserAdd;

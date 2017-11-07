@@ -1,12 +1,12 @@
 import React from 'react'
-import AddTask from "../../containers/tasks/AddTask";
-import VisibleTasksList from "../../containers/tasks/VisibleTasksList";
+import AddTask from "./containers/AddTask";
+import VisibleTasksList from "./containers/VisibleTasksList";
 import Filter from "./Filter";
 import Paper from "material-ui/Paper/Paper";
 import {createStore} from "redux";
 import Provider from "react-redux/es/components/Provider";
-import {tasksApp} from "../../reducers/index";
-import {setTasks} from "../../actions/index";
+import {setTasks} from "./actions";
+import tasksApp from "./reducers";
 
 import './TaskManager.css'
 

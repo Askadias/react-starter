@@ -1,6 +1,6 @@
-import {addUser} from "../../actions/index";
-import UserAddForm from "../../components/user/UserAddForm";
 import connect from "react-redux/es/connect/connect";
+import {addUser} from "../actions";
+import UserAddForm from "../UserAdd";
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -10,6 +10,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-const UserAdd = connect(null ,mapDispatchToProps)(UserAddForm);
+const UserAdd = connect(null, mapDispatchToProps)(UserAddForm);
 
 export default UserAdd;

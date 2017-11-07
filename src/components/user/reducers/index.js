@@ -1,25 +1,30 @@
-import {ADD_USER, DELETE_USER, SET_USERS, UPDATE_USER} from "../actions/actionTypes";
+import {combineReducers} from 'redux'
+import Actions from "../actions";
 
 const users = (state = [], action) => {
     switch (action.type) {
-        case ADD_USER:
+        case Actions.ADD_USER:
             return [
                 ...state,
                 action.user
             ];
-        case DELETE_USER:
+        case Actions.DELETE_USER:
             return state.filter((user) => user.id !== action.id);
-        case UPDATE_USER:
+        case Actions.UPDATE_USER:
             return state.map(user =>
                 (user.id === action.user.id)
                     ? action.user
                     : user
             );
-        case SET_USERS:
+        case Actions.SET_USERS:
             return action.users;
         default:
             return state
     }
 };
 
-export default users;
+const usersApp = combineReducers({
+    users
+});
+
+export default usersApp

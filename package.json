@@ -2,7 +2,7 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://askadias.github.io/react-starter",
+  "homepage": "https://askadias.github.io",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "immutable": "^3.8.2",

@@ -1,15 +1,15 @@
 import connect from "react-redux/es/connect/connect";
-import TasksList from "../../components/tasks/TasksList";
-import {toggleTask} from "../../actions";
-import {SHOW_ACTIVE, SHOW_ALL, SHOW_COMPLETED} from "../../components/tasks/filterTypes";
+import TasksList from "../TasksList";
+import {toggleTask} from "../actions";
+import {FilterTypes} from "../Filter";
 
 const getVisibleTasks = (tasks, filter) => {
     switch (filter) {
-        case SHOW_ALL:
+        case FilterTypes.SHOW_ALL:
             return tasks;
-        case SHOW_COMPLETED:
+        case FilterTypes.SHOW_COMPLETED:
             return tasks.filter(t => t.completed);
-        case SHOW_ACTIVE:
+        case FilterTypes.SHOW_ACTIVE:
             return tasks.filter(t => !t.completed);
         default:
             return [];

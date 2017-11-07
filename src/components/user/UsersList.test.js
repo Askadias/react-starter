@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import UsersList from "./UsersList";
-import {UserInfoRow} from "./UsersList";
 
 const users = [
     {id: 1, firstName: 'Kast', lastName: 'Askadias', age: 31},
