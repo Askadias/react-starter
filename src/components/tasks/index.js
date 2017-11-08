@@ -25,8 +25,8 @@ const TaskManager = () => (
     <Provider store={tasksStore}>
         <Paper zDepth={1} className='TaskManager'>
             <AddTask/>
-            <VisibleTasksList/>
             <Filter/>
+            <VisibleTasksList/>
         </Paper>
     </Provider>
 );

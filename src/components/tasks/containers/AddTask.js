@@ -17,7 +17,7 @@ let AddTask = ({dispatch}) => {
                 dispatch(addTask(input.input.value));
                 input.input.value = ''
             }}>
-                <TextField name='taskName' ref={node => input = node}/>
+                <TextField name='taskName' ref={node => input = node} floatingLabelText="Task Name"/>
                 <RaisedButton type='submit' label='Add Task' primary={true}/>
             </form>
         </div>
